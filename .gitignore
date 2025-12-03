@@ -37,7 +37,7 @@ coverage.xml
 *.py,cover
 .cache/
 
-# Flask / FastAPI specific
+# Database / instance files
 instance/
 *.db
 *.sqlite3
@@ -63,7 +63,7 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# misc
+# misc env files
 *.env
 .env.*
 .env.local
