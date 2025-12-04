@@ -5,7 +5,7 @@ STRUCTURE = {
         "__init__.py": "",
         "main.py": "",
         "requirements-dev.txt": "",
-        "requirements-txt": "",
+        "requirements.txt": "",
         "utils": {
             "__init__.py": "",
             "helpers.py": "",
