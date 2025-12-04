@@ -4,6 +4,8 @@ STRUCTURE = {
     "backend": {
         "__init__.py": "",
         "main.py": "",
+        "requirements-dev.txt": "",
+        "requirements-txt": "",
         "utils": {
             "__init__.py": "",
             "helpers.py": "",
@@ -19,15 +21,17 @@ STRUCTURE = {
         },
         "schemas": {
             "__init__.py": "",
-        }
+        },
     },
     "tests": {
         "__init__.py": "",
     },
     "requirements.txt": "",
     "pyproject.toml": "",
+    ".pre-commit-config.yaml": "",
     "README.md": "# Backend\n\nThis is the backend service.",
 }
+
 
 def create_structure(base_path, structure):
     for name, content in structure.items():
@@ -39,6 +43,7 @@ def create_structure(base_path, structure):
             # Create file with content
             with open(path, "w") as f:
                 f.write(content if content else "")
+
 
 if __name__ == "__main__":
     # Get the directory where the script is located
