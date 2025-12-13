@@ -9,7 +9,14 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 if DATABASE_URL is None:
     raise ValueError("DATABASE_URL is not set!")
 
-engine = create_engine(DATABASE_URL)
+# Add connection timeout and pool settings
+engine = create_engine(
+    DATABASE_URL,
+    pool_pre_ping=True,  # Test connections before using them
+    connect_args={
+        "connect_timeout": 5,  # 5 second connection timeout
+    },
+)
 
 SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)
 
