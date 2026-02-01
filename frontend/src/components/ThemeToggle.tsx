@@ -11,7 +11,7 @@ export default function ThemeToggle() {
       isIconOnly
       variant="light"
       aria-label="Toggle theme"
-      onPress={toggleTheme} // 🔥 IMPORTANT
+      onPress={toggleTheme}
       className="hover:bg-default/20 transition-colors"
     >
       {theme === "dark" ? (
