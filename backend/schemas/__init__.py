@@ -4,6 +4,7 @@ from .auth import (
     TokenPayload,
     RequestDetails,
     TokenSchema,
+    RefreshTokenRequest,
     ChangePassword,
     TokenCreate,
 )
@@ -15,6 +16,7 @@ __all__ = [
     "TokenPayload",
     "RequestDetails",
     "TokenSchema",
+    "RefreshTokenRequest",
     "ChangePassword",
     "TokenCreate",
     "UserCreate",

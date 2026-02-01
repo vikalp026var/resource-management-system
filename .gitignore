@@ -81,3 +81,8 @@ pnpm-debug.log*
 tmp/
 temp/
 uploads/
+
+# In your root .gitignore
+infra/.env
+infra/.env.*
+!infra/.env.example

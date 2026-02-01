@@ -15,6 +15,8 @@ class Constant:
         self.JWT_REFRESH_SECRET_KEY = os.getenv(
             "JWT_REFRESH_SECRET_KEY", "13ugfdfgh@#$%^@&jkl45678902"
         )
+        self.VALID_ROLES = ["admin", "employee", "hr"]
+        self.EMPLOYEE_ID_PREFIX = "CLUDNEBLA"
 
 
 constant = Constant()

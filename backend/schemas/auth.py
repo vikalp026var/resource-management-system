@@ -1,5 +1,6 @@
 from pydantic import BaseModel, EmailStr
 import datetime
+from typing import Optional
 
 
 class LoginRequest(BaseModel):
@@ -13,19 +14,23 @@ class Token(BaseModel):
 
 
 class TokenPayload(BaseModel):
-    sub: str | None = None  # user_id or email
-    exp: int | None = None  # expiration timestamp
+    sub: Optional[str] = None  # user_id or email
+    exp: Optional[int] = None  # expiration timestamp
 
 
 class RequestDetails(BaseModel):
     email: str
     password: str
-    old_password: str | None = None
-    new_password: str | None = None
+    old_password: Optional[str] = None
+    new_password: Optional[str] = None
 
 
 class TokenSchema(BaseModel):
     access_token: str
+    refresh_token: str
+
+
+class RefreshTokenRequest(BaseModel):
     refresh_token: str
 
 
