@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Cache files
+.cache
+.vite
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+__pycache__
+*.pyc

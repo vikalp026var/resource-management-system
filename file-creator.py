@@ -12,6 +12,7 @@ STRUCTURE = {
         },
         "api": {
             "__init__.py": "",
+            "auth.py": "",
         },
         "db": {
             "__init__.py": "",

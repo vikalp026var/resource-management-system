@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+python-dotenv
+pydantic
+passlib[bcrypt]
+python-jose[cryptography]
+pydantic[email]
+passlib
+bcrypt
+argon2_cffi
+PyJWT>=2.8.0

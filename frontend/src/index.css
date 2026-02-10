@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root,
+  .light {
+    /* Light theme colors */
+    --heroui-off: #f5f5f5;
+    --heroui-border-off: #f5f5f5;
+    --heroui-dull: #6b7280;
+    --heroui-danger: #ef4444;
+  }
+
+  .dark {
+    /* Dark theme colors */
+    --heroui-off: #1e1e1e;
+    --heroui-border-off: #1e1e1e;
+    --heroui-dull: #9ca3af;
+    --heroui-danger: #ef4444;
+
+    /* Override theme colors for dark mode */
+    --color-background: #0a0a0a;
+    --color-foreground: #ecedee;
+    --color-content1: #18181b;
+    --color-content2: #27272a;
+    --color-content3: #3f3f46;
+    --color-content4: #52525b;
+    --color-divider: #2d2d2d;
+    --color-default: #3f3f46;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    overflow: visible;
+  }
+
+  body {
+    font-family:
+      "Inter",
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    background-color: #f5f5f5;
+    color: #1e1e1e;
+  }
+
+  html.light {
+    background-color: #f5f5f5;
+    color: #1e1e1e;
+  }
+
+  html.dark {
+    background-color: #0a0a0a;
+    color: #ecedee;
+  }
+
+  .light body {
+    background-color: #f5f5f5;
+    color: #1e1e1e;
+  }
+
+  .dark body {
+    background-color: #0a0a0a;
+    color: #ecedee;
+  }
+}
+
+/* Remove default blue focus outline from HeroUI inputs */
+[data-slot="input-wrapper"]:focus-within,
+[data-slot="inner-wrapper"]:focus-within,
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none !important;
+}
+
+html {
+  font-size: 87.5%;
+}
+
+.text-h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.text-h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.text-h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.text-h4 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.text-h5 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.005em;
+  font-weight: 500;
+}
+
+.text-h6 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: -0.005em;
+  font-weight: 500;
+}
+
+/* Custom scrollbar that adapts to light/dark mode */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Light mode scrollbar */
+*::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Dark mode scrollbar */
+.dark::-webkit-scrollbar-thumb,
+.dark *::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.dark::-webkit-scrollbar-thumb:hover,
+.dark *::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: auto;
+}
+
+/* Light mode Firefox */
+* {
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+/* Dark mode Firefox */
+.dark,
+.dark * {
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+/* Ripple animation */
+@keyframes ripple {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+
+.animate-ripple {
+  animation: ripple 0.6s linear;
+}
